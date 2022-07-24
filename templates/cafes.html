@@ -23,13 +23,28 @@
                 <tr>
                     <th>Cafe Name </th>
                     <th>Location </th>
-                    <th>Open </th>
-                    <th>Close </th>
-                    <th>Coffee </th>
-                    <th>Wifi Power </th>
-                    <th>Power</th>
+                    <th>Sockets </th>
+                    <th>Toilets </th>
+                    <th>Wifi</th>
+                    <th>Calls</th>
+                    <th>Seats</th>
+                    <th>Coffe Price</th>
                 </tr>
           </thead>
+          <tbody>
+          {%for cafe in cafe_data%}
+          <tr>
+              <th>{{cafe.name}}</th>
+              <th>{{cafe.location}}</th>
+              <th>{{cafe.has_sockets}}</th>
+              <th>{{cafe.has_toilet}}</th>
+              <th>{{cafe.has_wifi}}</th>
+              <th>{{cafe.can_take_calls}}</th>
+              <th>{{cafe.seats}}</th>
+              <th>{{cafe.coffee_price}}</th>
+          </tr>
+          {% endfor %}
+          </tbody>
 
   	  </table>
 
